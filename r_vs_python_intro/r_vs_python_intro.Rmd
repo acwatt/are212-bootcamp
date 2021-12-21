@@ -1,0 +1,147 @@
+---
+title: "R vs python introduction"
+author: "AC Watt"
+date: "12/21/2021"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+The purpose of this tutorial is to compare some common features of R and python that will be implemented in ARE 212 (Econometrics: Multiple Equation Estimation). This first part will run through examples of tasks in both R and python before starting part 2, which will focus specifically on python.
+
+R and python are both popular programming languages, here are some comparisons between the two:
+
+- R has been adopted by the statistics community, python has been adotped by general purpose programmers
+- R generally has the most cutting edge statistics packages (sometimes the only version is written in R), python has the most cutting edge Machine Learning tools
+- R and python are similar in syntax (compared to other languages)
+- both can execute code line-by-line or in a whole script
+- both have debugging tools to help find the source of errors (the python's error messages are often more useful)
+- both use dataframes to handle data and do data cleaning tasks (R's `tidyverse` vs python's `pandas`)
+- both can be used for API calls (getting data from some internet source) but python is frequently used for more intense web scrapping applications
+- some statistical applications are shorter to write in R but easier to write and understand in python
+- both R and python have methods to do very fast computations but it takes practice writing code in that way (vectorized functions, numpy arrays, etc).
+
+
+# Organizing your scripts
+Two things I want to point out: directory structure and file structure.
+
+## Directory structure
+When creating multiple scripts that have various outputs, it's important to have a structure so things don't get lost. This should be simple for a class folder, so I'll just leave you with the following suggestion: 
+
+Regardless if you are using GitHub, consider using [Ryan Kellogg's RA Manual page on Folder Organization](https://github.com/kelloggrk/Kellogg_RA_Manual/wiki/Folder-Organization) as a guide for organizing your project folders for research projects. It's not as applicable for a simple class folder, but I encourage you to review his manual in detail.
+
+## File structure
+There's generally several parts to each script you write:
+
+- the header 
+- package imports
+- functions
+- classes (sometimes)
+- execution: use of functions/classes to get output
+- comments all around
+
+### The Header
+Suggested minimal information in the header:
+
+- Name of the file (in case the contents are copy-pasta'ed)
+- Author
+- Date of creation or last
+- Description of the purpose of the file
+- (sometimes) notes about the next steps to complete the file
+
+### Package imports
+It's generally suggested in both R and python to put all your package imports at the top of the file, immediately after the header (and any compile commands).  This allows readers to know easily what libraries they need to install before running the program and reduces the chances of "package not installed" errors in the middle of running the script. It immediately allows users to install the necessary packages before running the rest of the script.
+
+### Functions
+Chunks of reusable code that generally have some input arguments, and either will return some new object or have some "side effect" like saving a graph to a file.
+
+### Classes
+Another type of reusable code chunk, but instead of just running some lines of code and returning a value (like a function), a class creates an object that has specific attributes (values) and methods (functions that can be run on the object).
+
+### Execution
+This is the area of the script where you can see the steps all come together. "Do X", then "Do Y", then "Plot this thing" and finally, "Save this output".
+
+### Comments
+Any code should include comments -- bare minimum are the comments that will make it clear to you (the author) what each of the steps are doing. Better are comments that a random person who is relatively proficient in the language can understand why each step is executed. Code comments are a general form of documentation that is important for replicability is science. Often, good names for variables can be a substitute for comments if the names make it obvious what the line of code is doing. Don't comment something that is obvious, e.g., `x = x + 1   # incrememnt x by one unit`.
+
+In general:
+
+- all functions and classes should have a comment explaining what they do, and what each of the input arguments should be.
+- add comments to help the reader understand the purpose of a chunk of code
+- a overarching comment at the top of the file should be updated to include the purpose of the set of functions
+- you can include detailed comments on functions either at the top of the script or inside each function
+
+**Hadley Wickham's suggestion** (works in both python and R):
+"Comment your code. Each line of a comment should begin with the comment symbol and a single space: #. Comments should explain the why, not the what. Use commented lines of - and = to break up your file into easily readable chunks."
+
+
+# R Markdown
+For the rest of this tutorial, we will be using R markdown to comment on and execute both R and python code examples. If you want more information about running python in R markdown, see the [Using python in R markdown notes](../python_in_rmarkdown/using_python_in_R_markdown.html) (see the `R Markdown` section for a list of some reasons why I like R markdown). All python code included here could be pulled out and executed in a .py script or jupyter notebook.
+
+**Note on how this compares with the 212 course:** When using R in Sofia's half of 212, you could use either R scripts or R markdown -- R markdown makes writing the final version that you turn in very easy. When using python in Ethan's half of 212, you could use python in R markdown, python in your own editor (Spyder, PyCharm, Jupyter Notebook), or use python in the cloud using the Jupyter Hub that Ethan has set up for 212. There's no PDF you turn in to Ethan (you write posts in response to questions on Piazza), so the final product is less necessary. But writing up a jupyter notebook or R markdown file will make it easier to write lengthy explanations when you come back to work on it, or if you are working on it with someone else and you send them your code.
+
+
+
+
+# Comparing R vs Python
+
+## File headers
+An example file header in R markdown is 
+````
+---
+title: "R vs python introduction"
+author: "AC Watt"
+date: "12/21/2021"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+    toc_float: true
+---
+````
+Note: if using a plain R script, a similar header should be added to the top of the file, commented out using `#`.
+
+
+An example file header in a python script is 
+````
+# filename: r_vs_python_intro.py
+# author: AC Watt
+# date: 12/21/2021
+# 
+---
+````
+
+
+Side by side R script + python script with:
+
+- file headers
+- imports
+- data types (numbers, strings, lists, named lists vs dict, 
+- objects and attributes (R function returning a tuple, named list using dollar sign, referenceclass vs Python function returning a tuple, dictionary, dataframe, class)
+- matrix algebra
+- simulated data using distributions
+- minimizing functions
+- optimizing (minimizing) to fit a parabola to data points ("you'll learn how to do this in matrix algebra in Sofia's half")
+
+See survey do check if this list matches
+
+
+
+
+# Other notes
+
+## Code Style
+Coding style is a set of guidelines to follow when formatting your code. Lots of code can run equally well, but much code is hard to read and debug. Following a style can help -- consider following [Hadley Wickham's R style guide](http://adv-r.had.co.nz/Style.html), and the [PEP 8 python style guide](https://pep8.org/).
+
+
+
+# Navigation links
+- [Using python in R markdown notes](../python_in_rmarkdown/using_python_in_R_markdown.html)
+- [212 Bootcamp Part 2: Python optimization application](../)

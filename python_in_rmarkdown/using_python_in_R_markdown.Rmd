@@ -1,6 +1,8 @@
 ---
 title: "Using python in R markdown"
-output: pdf_document
+output: html_document
+author: "AC Watt"
+date: "12/21/2021"
 ---
 
 ```{r setup, include=FALSE}
@@ -100,6 +102,8 @@ Some great features of R Markdown:
 - can export R markdown files to .R and .py scripts if needed
 - can "knit" to HTML, PDF, MS Word
 - can use `browser()` to pause midway through execution
+- can use LaTeX code right in the markdown file, and can put R variables into LaTeX chunks
+- can make basic LaTeX Beamer slides pretty easily with nice R ggplot graphics
 
 Some great features of Rstudio:
 
@@ -111,7 +115,10 @@ Some great features of Rstudio:
 
 
 
+# Navigation links
 
+- [212 Bootcamp Part 1: R vs Python tutorial](../r_vs_python_intro/r_vs_python_intro.html)
+- [212 Bootcamp Part 2: Python optimization application](../)
 
 
 
