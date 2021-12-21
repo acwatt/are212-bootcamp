@@ -105,6 +105,7 @@ output:
     number_sections: true
     toc_float: true
 ---
+# Description: This is a tutorial file for the ARE 212 bootcamp. The purpose is to compare common functions in both python and R that are of use during the 212 course.
 ````
 Note: if using a plain R script, a similar header should be added to the top of the file, commented out using `#`.
 
@@ -114,10 +115,9 @@ An example file header in a python script is
 # filename: r_vs_python_intro.py
 # author: AC Watt
 # date: 12/21/2021
-# 
----
+"""This is a tutorial file for the ARE 212 bootcamp. The purpose is to compare common functions in both python and R that are of use during the 212 course."""
 ````
-
+The triple quote `"""` is a python syntax to write long strings that may take multiple lines. Most often used for docstrings (documentation strings on scripts, functions, and classes).
 
 Side by side R script + python script with:
 

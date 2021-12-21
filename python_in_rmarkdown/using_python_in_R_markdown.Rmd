@@ -1,30 +1,36 @@
 ---
 title: "Using python in R markdown"
-output: html_document
 author: "AC Watt"
 date: "12/21/2021"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Installing `reticulate` to run python
+# Installing `reticulate` to run python
 Need to install the `reticulate` package to run python code in Rstudio.
 ```{r packages}
 # install.packages("reticulate")
 ```
 
 
-## Installing python (if you don't have it installed already)
+# Installing python (if you don't have it installed already)
 If you have python installed already, skip this. The easiest way to install python for use in Rstudio (if you do not already have python installed) is: 
 ```{r Installing python, eval=FALSE}
 reticulate::install_miniconda()
 ```
 In R studio, you can press CTRL+ENTER (CMD+ENTER) when your cursor is on the line above to execute the line. Even though the chunk is set to `eval=FALSE` in the .Rmd file, you can still execute it line-by-line with Ctrl+ENTER (or CTRL+SHIFT+ENTER).
 
+If you plan to use python a lot, I would suggest installing [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](https://www.anaconda.com/products/individual) from the anaconda website. This allows you the fortune of using `conda` in the command prompt to easily install needed python packages (similar to `install.packages("package_name")` in R).
 
-### Using R packages
+
+## Using R packages
 There are two ways to use R packages. After you've installed a package, you can refer to any function or value inside that package using the `::` notation. In the chunk above, `reticulate::install_miniconda()` is saying "run the `install_miniconda()` function from the `reticulate` package.
 
 You can also import all the functions from a package at the same time using `library(packagename)`. This allows you to just use the name of the function. So we could have instead used `library(reticulate)` then `install_miniconda()` in the chunk above. There are generally two concerns when deciding when to use one method or the other:
@@ -35,7 +41,7 @@ You can also import all the functions from a package at the same time using `lib
 It's generally hard to know the names of all functions in a package though. Luckily, when you run `library(obscure_package)`, R tells you what functions this package is covering up. Try `library(tidyverse)` to see the functions that the `tidyverse` package covers up.
 
 
-### Selecting a python interpeter (optional)
+## Selecting a python interpeter (optional)
 We can to select a python interpreter (the program that executes the python code). If no selection is made, then the default python interpreter will be used (which is generally the most updated version of python installed). This is the python that activates when you type `python` into a terminal. If you have different conda environments, then you can select the python interpreter for a specific environment using the steps below. (sidenote: it's suggested that you different conda environments for different projects so you don't accidentally install any python packages that mess up the way other programs run. You can either keep all your conda environments in one place, or store the environment in the project folder -- Rstudio will use this version of python by default.)
 
 To select a python interpreter:
@@ -44,7 +50,7 @@ To select a python interpreter:
 - Click the `Conda Environments` tab to select the conda environment you wish to use.
 
 
-## Running python in Rstudio
+# Running python in Rstudio
 
 An R code chunk in an R markdown (.Rmd) file looks like this (backticks, not apostraphes):
 
@@ -92,7 +98,7 @@ y = [5, 7, 6]
 plt.plot(x, y, '-')
 ```
 
-## R Markdown
+# R Markdown
 Some great features of R Markdown:
 
 - Table of contents on the right of the code pane to select by header
