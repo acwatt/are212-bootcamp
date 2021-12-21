@@ -1,6 +1,6 @@
 ---
 title: "Using python in R markdown"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
