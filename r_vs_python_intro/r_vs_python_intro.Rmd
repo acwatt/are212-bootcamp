@@ -121,9 +121,62 @@ The triple quote `"""` is a python syntax to write long strings that may take mu
 
 Side by side R script + python script with:
 
-- file headers
-- imports
+
+
+
+## Package Imports
+
+In both R and python, some commonly used functions live outside of the basic features
+of the language. They live in "packages" that need to be imported in order to use
+those functions. For example, plotting is commonly done using the `ggplot2`
+package in R and the `matplotlib` package in python. Here's how you would install
+and import the ggplot2 package in R (we'll show how to plot later).
+
+```{r R package import, eval=T}
+# install.packages("ggplot2")  # only need to run this once ever for each computer
+library(ggplot2)
+```
+
+You could then use `ggplot2` later using `ggplot` commands. We'll discuss what
+this does later, but a common plotting command would look like
+```{r R package use, eval=T}
+# Plot the x and y columns from the dataframe `data`
+data = data.frame(x=c(1,2,3), y=c(1,4,9))
+p = ggplot(data) + geom_line(aes(x,y))
+p
+```
+
+
+To import and use matplotlib in python to plot, we would import the submodule `pyplot`
+from `matplotlib` (a package living within `matplotlib`). In python, it's common
+to rename packages you import as short variables for easy accessing later.
+```{python }
+
+```
+
+
+```{python Python package import, eval=T}
+import matplotlib.pyplot as plt
+
+x = [1,2,3]
+y = [1,4,9]
+
+plt.plot(x, y)
+plt.show()
+```
+
+### Installing Packages
+In R, installing packages is quite easy -- just run `install.packages("package_name")`
+inside the same code and you're set. This only needs to be run once. 
+
+In python, installation of packages happens outside of the code. The two most popular
+methods of installing python packages are using the `pip` and `conda` packages
+managers. We favor the `conda` package manager because you can install different
+packages for different projects more easily. `pip` is the "bare bones" installer,
+whereas `conda` does a lot of nice setup for you. 
+
 - data types (numbers, strings, lists, named lists vs dict, 
+- loops: while, for, ... and scope
 - objects and attributes (R function returning a tuple, named list using dollar sign, referenceclass vs Python function returning a tuple, dictionary, dataframe, class)
 - matrix algebra
 - simulated data using distributions
