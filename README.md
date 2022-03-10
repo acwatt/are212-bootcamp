@@ -4,26 +4,26 @@ This is a short introductory python workshop for students in ARE 212 (Graduate A
 
 ## Overview
 ### Section 1: Some python fundementals (60 min)
-1. Comment python installations
-2. Installing python packages
-3. Data types in python and printing values
+1. Comment python installations (10)
+2. Installing python packages (20)
+3. Data types in python and printing values (30)
 
 ### Section 2: Matrix algebra and looping (60 min)
-1. Matrix algebra in python
-2. For & while loops, scope
-3. List comprehension
+1. Matrix algebra in python (15)
+2. For & while loops, scope (30)
+3. List comprehension (10)
 
 ### Section 3: functions (30 min)
-1. Defining and using functions
-2. Lambda functions (anonymous functions)
-3. Function inceptions (functions in functions)
+1. Defining and using functions (10)
+2. Lambda functions (anonymous functions) (10)
+3. Function inception (functions in functions) (10)
 
 ### Section 4: Classes (50 min)
-1. Basic class structure
-2. Small examples with instantiation
-3. Updating class attributes
-4. Class example (minimizing a function)
-5. OLS example
+1. Basic class structure (10)
+2. Small examples with instantiation (10)
+3. Updating class attributes (10)
+4. Class example (minimizing a function) (10)
+5. OLS example (20)
 
 ### Section 5: Ethan's GMM class (30 min)
 
