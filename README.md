@@ -13,6 +13,19 @@ This is a short introductory python workshop for students in ARE 212 (Graduate A
 2. For & while loops, scope
 3. List comprehension
 
-### Section 4: functions (1 hour)
-1. Defining and using function unctions
-2. 
+### Section 3: functions (0.5 hour)
+1. Defining and using functions
+2. Lambda functions (anonymous functions)
+3. Function inceptions (functions in functions)
+
+### Section 4: Classes
+1. Basic class structure
+2. Small examples with instantiation
+3. Updating class attributes
+4. Class example (minimizing a function)
+5. OLS example
+
+### Section 5: Ethan's GMM class
+
+
+
