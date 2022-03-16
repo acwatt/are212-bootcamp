@@ -12,9 +12,9 @@ This is a short introductory python workshop for students in ARE 212 (Graduate A
 
 ### Section 2: Functions (40 min)
 1. Defining and using functions (10)
-2. Lambda functions (anonymous functions) (10)
-3. Function inception (functions in functions) (10)
-4. Scope and Namespace (10)
+2. Scope and Namespace (10)
+3. Lambda functions (anonymous functions) (10)
+4. Function inception (functions in functions) (10)
 
 ### Section 3: Classes (50 min)
 1. Basic class structure (10)
