@@ -1,3 +1,6 @@
+Send out the following quiz 2 weeks before the workshop with the following message:
+> If you miss one or more question on the quiz, we strongly suggest you attend the workshop
+
 ## 1. What do the following lines print?
 ```python
 import numpy as np
