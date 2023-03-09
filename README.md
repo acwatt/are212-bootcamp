@@ -2,6 +2,9 @@
 
 This is a short introductory python workshop for students in ARE 212 (Graduate Applied Econometrics in the department of Agricultural & Resource Economics at UC Berkeley). This workshop is meant to serve as a primer on python fundementals, specifically geared toward python tasks used in the ARE 212 course. This workshop is fairly brief, but meant to give an overview of the functionality of various python strucutres that may not be obvious in a more general python fundementals course; functionality that can be confusing for many new and experienced users of python taking the ARE 212 course. This workshop is currently implemented through a series of juptyer notebooks that are designed to run through UC Berkeley's JupyterHub server.
 
+To open these files using JupyterHub, click the below link. This will clone the github repo into your JupyterHub account.
+https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Facwatt%2Fare212-bootcamp&urlpath=lab%2Ftree%2Fare212-bootcamp%2FBootcamp+main+-+OLS+class+%28blank%29.ipynb&branch=main
+
 ## Overview
 ### Section 1: Data types, loops, and matrix algebra (60 min)
 1. Basic python data types (10)
