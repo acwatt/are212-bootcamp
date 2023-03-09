@@ -17,6 +17,15 @@ Advice for future workshops:
 - send out a pre-test (see pre-test.md) two weeks before the workshop -- this helps with turn out and helps people realize that even if they have programmed in python before, they may not know some fundemental programming details.
 - send out a post-evaluation halfway through the rest of the semester (after April 1) -- this gives them enough time to see what was useful and what they would have benefited more from.
 
+# More details on `Bootcamp main - OLS class (blank).ipynb`
+- `Bootcamp main - OLS class (blank).ipynb` is a "blank" version of `Bootcamp main - OLS class.ipynb`, meaning that we have removed the output and solutions to exercises at the end.
+- The blank version is meant to be worked through live, during a workshop, with the students also working through it on their laptop.
+- There should probably be more time devoted to the students trying to write their own solutions. More exercises thorughout the doc are needed.
+
+# Setting up the JupyterHub repo pull
+- See https://github.com/jupyterhub/nbgitpuller on how to create a link from this repo
+- Send out the link to students -- the link should ask them to sign into their JupyterHub account and it will open the specified document.
+
 Good luck and don't hesitate to reach out to Lucy or Aaron!
 Lucy Hackett
 Aaron Watt
